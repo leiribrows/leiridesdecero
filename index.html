@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formación Profesional en Micropigmentación</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #FDFBF8; /* Crema muy claro */
+            color: #4B3F3F; /* Marrón oscuro */
+        }
+        h1, h2, h3, .playfair {
+            font-family: 'Playfair Display', serif;
+            color: #8C3B3B; /* Color vino/borgoña */
+        }
+        .navbar-brand, .nav-link {
+            color: #8C3B3B !important;
+            font-weight: 500;
+        }
+        .header-bg {
+            background-color: #8C3B3B; /* Fondo vino */
+        }
+        .hero {
+            padding: 80px 20px;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 3.5rem;
+            color: #8C3B3B;
+        }
+        .hero .lead {
+            font-size: 1.5rem;
+        }
+        .btn-custom {
+            background-color: #8C3B3B;
+            color: white;
+            border-radius: 50px;
+            padding: 12px 30px;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+        .btn-custom:hover {
+            transform: scale(1.05);
+            background-color: #6a2c2c;
+            color: white;
+        }
+        .section {
+            padding: 60px 20px;
+        }
+        .pain-point-box {
+            border: 2px solid #D3B8B8;
+            padding: 15px 25px;
+            border-radius: 15px;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        .itinerary-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .itinerary-item::before {
+            content: '✨'; /* O usa un ícono de SVG/FontAwesome */
+            margin-right: 15px;
+            font-size: 1.5rem;
+        }
+        .cta-final {
+            background-color: #8C3B3B;
+            color: #FDFBF8;
+        }
+        .cta-final h2 {
+            color: #FDFBF8;
+        }
+        .btn-whatsapp {
+            background-color: #25D366;
+            color: white;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header-bg py-2">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a class="navbar-brand playfair" href="#">TU ACADEMIA</a>
+            <a href="#contacto" class="btn btn-outline-light btn-sm d-none d-md-block">Contacto</a>
+        </div>
+    </header>
+
+    <!-- SECCIÓN 1: EL GANCHO -->
+    <section class="hero">
+        <div class="container">
+            <h1 class="mb-3">TU BOLETO DIRECTO PARA SER UNA ARTISTA DE LA BELLEZA</h1>
+            <p class="lead mb-4">Incluso si estás empezando desde cero.</p>
+            <a href="#contacto" class="btn btn-custom btn-lg">QUIERO MÁS INFORMACIÓN</a>
+            <!-- Aquí podrías insertar un video o imagen de fondo -->
+        </div>
+    </section>
+
+    <!-- SECCIÓN 2: EL PROBLEMA -->
+    <section class="section text-center">
+        <div class="container">
+            <h2 class="playfair">No te falta talento. Te falta el método correcto.</h2>
+            <p class="lead my-4 col-md-8 mx-auto">Nuestra formación te da el plan, la técnica y la confianza para convertir lo que amas en un negocio rentable y con libertad.</p>
+            <hr class="w-50 mx-auto my-5">
+            <h3 class="playfair mb-4">¿ESTÁS LISTA PARA CREAR, pero no sabes por dónde empezar?</h3>
+            <div class="col-md-8 mx-auto">
+                <div class="pain-point-box">Sientes que no tienes los recursos ni el conocimiento para empezar.</div>
+                <div class="pain-point-box">Ves a otras artistas triunfar mientras tú sigues esperando tu turno.</div>
+                <div class="pain-point-box">Te abruma tanta información y no sabes cuál camino elegir.</div>
+                <div class="pain-point-box">Tienes miedo de no estar a la altura o de fracasar otra vez.</div>
+            </div>
+             <a href="#contacto" class="btn btn-custom mt-4">QUIERO EL MÉTODO</a>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 3: LA TRANSFORMACIÓN -->
+    <section class="section bg-white">
+        <div class="container">
+            <h2 class="text-center mb-5 playfair">Itinerario de tu Transformación: ¿Qué vas a lograr?</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="itinerary-item">Dominar las técnicas más rentables: Microblading, Shading y Labios.</div>
+                    <div class="itinerary-item">Vender tus servicios premium con seguridad y autenticidad.</div>
+                    <div class="itinerary-item">Construir una marca personal que atraiga a tus clientes ideales.</div>
+                    <div class="itinerary-item">Crear un portafolio profesional y contenido que enamore.</div>
+                    <div class="itinerary-item">Ganar dinero desde tu propio estudio, con libertad de horarios.</div>
+                    <div class="itinerary-item">Proyectar una imagen segura que refleje el valor de tu arte.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- SECCIÓN 4: LA GUÍA (INSTRUCTORA) -->
+    <!-- Coloca una buena foto tuya aquí -->
+
+    <!-- SECCIÓN 5: ¿QUÉ INCLUYE? -->
+    <!-- Coloca una imagen de tu kit o de alumnas en clase -->
+
+    <!-- SECCIÓN 6 Y 7: PREGUNTAS Y PRUEBA SOCIAL -->
+    <!-- Puedes añadir estas secciones siguiendo el mismo patrón -->
+
+    <!-- SECCIÓN 8: LLAMADA A LA ACCIÓN FINAL -->
+    <section id="contacto" class="section cta-final text-center">
+        <div class="container">
+            <h2 class="playfair">Tienes el mapa. ¡Ahora toma el pincel y diseña tu futuro!</h2>
+            <p class="lead my-4 col-md-8 mx-auto">No publicamos el precio porque queremos asegurarnos de que esta formación es perfecta para ti. Hablemos sin compromiso y resolvamos todas tus dudas.</p>
+            
+            <div class="row mt-5 justify-content-center">
+                <div class="col-md-5 mb-4">
+                    <div class="card p-4 text-dark">
+                        <h5 class="fw-bold">Déjanos tus datos y te llamamos</h5>
+                        <form>
+                            <div class="mb-3"><input type="text" class="form-control" placeholder="Tu Nombre" required></div>
+                            <div class="mb-3"><input type="tel" class="form-control" placeholder="Tu Teléfono (con código de país)" required></div>
+                            <button type="submit" class="btn btn-custom w-100">Agendar mi llamada de asesoría</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-5 mb-4 d-flex align-items-center">
+                     <div class="card p-4 w-100 text-dark">
+                        <h5 class="fw-bold">O escríbenos directamente</h5>
+                        <p>Inicia una conversación con una asesora ahora mismo.</p>
+                        <!-- IMPORTANTE: Cambia "123456789" por tu número de WhatsApp -->
+                        <a href="https://wa.me/123456789?text=Hola,%20quisiera%20más%20información%20sobre%20la%20formación%20en%20micropigmentación." class="btn btn-whatsapp btn-lg w-100" target="_blank">
+                           Chatear por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="text-center p-4 bg-dark text-white">
+        <p>&copy; 2025 Tu Academia de Belleza. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
