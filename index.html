@@ -4,310 +4,340 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Curso de Micropigmentación - Leiri Academy</title>
+    
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
     <style>
         :root {
-            --primary-color: #D3A7A7; /* Rosado suave */
-            --secondary-color: #333333; /* Gris oscuro / Negro */
-            --accent-color: #C0986D; /* Dorado/Bronce */
-            --bg-light: #FDFBF8;
+            --color-purple: #4C2A85; /* Morado profundo y elegante */
+            --color-gold: #D4AF37;   /* Dorado clásico */
+            --color-dark: #1a1a1a;   /* Negro suave */
+            --color-light: #F8F7FC; /* Blanco ligeramente morado */
+            --font-heading: 'Bodoni Moda', serif;
+            --font-body: 'Inter', sans-serif;
         }
 
         body {
-            font-family: 'Montserrat', sans-serif;
-            background-color: var(--bg-light);
-            color: var(--secondary-color);
+            font-family: var(--font-body);
+            background-color: #FFFFFF;
+            color: var(--color-dark);
+            font-size: 1.1rem;
         }
 
-        h1, h2, h3, .heading-font {
-            font-family: 'Cormorant Garamond', serif;
-            font-weight: 700;
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-heading);
+            color: var(--color-purple);
         }
-
+        
         .section {
-            padding: 80px 20px;
+            padding: 100px 20px;
+        }
+        
+        .lead {
+            font-size: 1.25rem;
+            font-weight: 400;
         }
 
-        .btn-custom {
-            background-color: var(--secondary-color);
-            color: white;
-            border: 2px solid var(--secondary-color);
-            border-radius: 50px;
-            padding: 12px 35px;
-            font-weight: 500;
-            transition: all 0.3s;
+        .btn-gold {
+            font-family: var(--font-body);
+            font-weight: 700;
+            font-size: 0.9rem;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 1.5px;
+            background: linear-gradient(45deg, #E6C67C, #D4AF37);
+            color: var(--color-dark);
+            border: none;
+            border-radius: 50px;
+            padding: 18px 40px;
+            transition: all 0.4s ease;
+            box-shadow: 0 8px 15px rgba(212, 175, 55, 0.2);
         }
 
-        .btn-custom:hover {
-            background-color: transparent;
-            color: var(--secondary-color);
-            transform: translateY(-3px);
+        .btn-gold:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(212, 175, 55, 0.3);
+            color: #000;
+        }
+        
+        /* --- Componentes Específicos --- */
+        .navbar-brand {
+             font-family: var(--font-heading);
+             font-size: 1.8rem;
+             color: var(--color-purple) !important;
         }
 
-        /* --- Secciones Específicas --- */
         .hero {
             text-align: center;
-            background-color: white;
+            padding-top: 120px;
+            padding-bottom: 120px;
         }
-
+        
         .hero h1 {
-            font-size: 3.8rem;
+            font-size: clamp(2.5rem, 5vw, 4.5rem); /* Responsive font size */
+            line-height: 1.2;
         }
 
-        .market-section {
-            background-color: white;
+        .highlight-gold {
+            color: var(--color-gold);
         }
 
-        .market-section .icon {
+        .card-feature {
+            border: 0;
+            background: transparent;
+        }
+
+        .card-feature .icon {
             font-size: 3rem;
-            color: var(--primary-color);
-        }
-        
-        .transformation-section {
-            background-color: var(--secondary-color);
-            color: white;
-        }
-        
-        .transformation-section h2 {
-            color: var(--primary-color);
+            color: var(--color-gold);
+            margin-bottom: 1rem;
         }
 
-        .course-details-card {
-            background-color: white;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        .section-dark {
+            background-color: var(--color-purple);
+            color: var(--color-light);
+        }
+        .section-dark h2 {
+            color: #FFFFFF;
+        }
+        
+        .course-card {
+            background-color: #FFFFFF;
+            border-radius: 20px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.07);
             border: 1px solid #eee;
+            overflow: hidden;
         }
-
-        .course-details-card h3 {
-             color: var(--primary-color);
+        
+        .course-card .header {
+            background-color: var(--color-light);
+            padding: 2rem;
         }
-
-        .course-details-card ul {
+        
+        .course-card .body {
+            padding: 2.5rem;
+        }
+        
+        .course-card ul {
             list-style: none;
             padding-left: 0;
         }
-
-        .course-details-card li {
-            padding-left: 2rem;
+        
+        .course-card li {
             position: relative;
+            padding-left: 35px;
             margin-bottom: 1rem;
         }
         
-        .course-details-card li::before {
-            content: '\f00c'; /* Check icon */
+        .course-card li::before {
+            content: '\f005'; /* Star icon */
             font-family: 'Font Awesome 6 Free';
             font-weight: 900;
-            color: var(--accent-color);
+            color: var(--color-gold);
             position: absolute;
             left: 0;
-            top: 5px;
+            top: 4px;
         }
-
-        .filter-section .card-body {
+        
+        .filter-card {
+            border-radius: 15px;
             padding: 2rem;
-        }
-        .filter-section h4 {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 700;
+            border: 1px solid #ddd;
         }
 
-        .testimonial-card {
-            background-color: #fff;
-            padding: 2rem;
-            border-left: 5px solid var(--primary-color);
+        .testimonial-quote {
+            font-size: 1.5rem;
+            font-style: italic;
+            position: relative;
+            padding-left: 50px;
+            border-left: 3px solid var(--color-gold);
+        }
+        
+        .founder-img {
+            max-width: 380px;
+            border-radius: 20px;
+            box-shadow: 15px 15px 0px var(--color-gold);
+        }
+        
+        .final-cta {
+            background-color: var(--color-light);
+            border-radius: 20px;
+            padding: 50px;
+        }
+        
+        .footer {
+            background-color: var(--color-dark);
+            color: #fff;
         }
 
-        .founder-section img {
-            max-width: 350px;
-            border-radius: 50%;
-            border: 10px solid white;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        }
-
-        .cta-section {
-            background-color: white;
-            border-top: 1px solid #eee;
-        }
     </style>
 </head>
 <body>
 
+    <!-- HEADER -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white py-3 sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="#">LEIRI ACADEMY</a>
+            <a href="#postulate" class="btn btn-gold d-lg-none">Postularme</a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a href="#postulate" class="btn btn-gold d-none d-lg-block">QUIERO POSTULARME</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
     <!-- HERO SECTION -->
     <section class="section hero">
         <div class="container">
-            <h1 class="display-4">💋 ¿Quieres aprender micropigmentación y comenzar tu propio negocio con enfoque y resultados reales?</h1>
-            <p class="lead my-4 col-md-8 mx-auto">Descubre cómo una de las profesiones más rentables y demandadas puede darte la independencia económica y la libertad que siempre has deseado.</p>
+            <h1 class="mb-4">Conviértete en Artista de Micropigmentación y <span class="highlight-gold">Diseña tu Futuro.</span></h1>
+            <p class="lead my-4 col-lg-8 mx-auto">Un programa exclusivo para mujeres decididas a construir un negocio rentable, con propósito y libertad, partiendo desde cero.</p>
+            <a href="#postulate" class="btn btn-gold mt-3">POSTÚLATE AHORA</a>
         </div>
     </section>
 
     <!-- THE MARKET OPPORTUNITY -->
-    <section class="section market-section">
+    <section class="section bg-light">
         <div class="container text-center">
-            <h2 class="heading-font mb-5">💎 El Mundo de la Belleza No Se Detiene</h2>
-            <div class="row">
+            <h2 class="mb-5">💎 El Mundo de la Belleza es tu Mejor Inversión</h2>
+            <div class="row g-5">
                 <div class="col-md-4">
-                    <p class="icon"><i class="fas fa-chart-line"></i></p>
-                    <h5 class="fw-bold">Industria en Crecimiento</h5>
-                    <p>La industria de la belleza mueve miles de millones cada año. La micropigmentación es una de las áreas más rentables y con mayor demanda.</p>
+                    <div class="card-feature">
+                        <p class="icon"><i class="fas fa-chart-pie"></i></p>
+                        <h5 class="fw-bold">Mercado Multimillonario</h5>
+                        <p>Entra a una industria en constante crecimiento donde la demanda por artistas profesionales nunca se detiene.</p>
+                    </div>
                 </div>
                 <div class="col-md-4">
-                    <p class="icon"><i class="fas fa-star"></i></p>
-                    <h5 class="fw-bold">Alta Demanda</h5>
-                    <p>Cada día, más personas buscan realzar su belleza de forma semipermanente, buscando artistas cualificadas y profesionales como tú.</p>
+                    <div class="card-feature">
+                        <p class="icon"><i class="fas fa-gem"></i></p>
+                        <h5 class="fw-bold">Profesión de Alto Valor</h5>
+                        <p>La micropigmentación es una de las habilidades más rentables del sector, permitiéndote generar ingresos premium.</p>
+                    </div>
                 </div>
                 <div class="col-md-4">
-                    <p class="icon"><i class="fas fa-rocket"></i></p>
-                    <h5 class="fw-bold">Oportunidad Real</h5>
-                    <p>Esto no es solo una técnica, es tu oportunidad de alcanzar la independencia económica, gestionar tu tiempo y vivir de tu pasión.</p>
+                    <div class="card-feature">
+                        <p class="icon"><i class="fas fa-paper-plane"></i></p>
+                        <h5 class="fw-bold">Independencia Real</h5>
+                        <p>Esta es tu oportunidad para ser dueña de tu tiempo, construir tu propia marca y alcanzar la libertad financiera que deseas.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- THE TRANSFORMATION -->
-    <section class="section transformation-section text-center">
-        <div class="container col-md-8 mx-auto">
-             <h2 class="heading-font mb-4">💖 La Micropigmentación: Más que una técnica, una transformación</h2>
-             <p class="fs-5">La micropigmentación no solo es una técnica — es una oportunidad de transformar tu vida y la de otras mujeres. Con esta habilidad puedes crear belleza, generar ingresos y tener libertad. Lo que hoy puede parecer un sueño, con planificación y acompañamiento, puede convertirse en tu nuevo estilo de vida.</p>
+    <section class="section section-dark text-center">
+        <div class="container col-lg-8 mx-auto">
+             <h2 class="mb-4">💖 Más que una Técnica, una Transformación de Vida</h2>
+             <p class="lead">La micropigmentación es el vehículo para transformar tu vida y la de otras mujeres. Con esta habilidad, creas belleza, generas ingresos y diseñas tu libertad. Lo que hoy es un sueño, con nuestro acompañamiento se convierte en tu nuevo estilo de vida.</p>
         </div>
     </section>
 
     <!-- COURSE PRESENTATION & DETAILS -->
     <section class="section">
         <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="heading-font">👑 Curso de Micropigmentación LEIRI ACADEMY</h2>
-                <p class="lead">Aquí formamos mujeres valientes, decididas y comprometidas a cambiar su historia.</p>
-            </div>
             <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="course-details-card p-5">
-                        <p class="fs-5">En Leiri Academy trabajamos con <strong>grupos pequeños</strong> porque creemos que cada mujer merece acompañamiento real y resultados tangibles.</p>
-                        <hr class="my-4">
-                        <h3 class="mb-3">📅 Duración: 4 Días de Formación Intensiva</h3>
-                        <h3 class="mb-4">💄 Incluye:</h3>
-                        <ul>
-                            <li>Práctica en modelo real para ganar confianza.</li>
-                            <li>Certificación profesional que avala tus conocimientos.</li>
-                            <li>Todos los materiales de práctica de alta calidad incluidos.</li>
-                            <li>Seguimiento personalizado después del curso para resolver dudas.</li>
-                            <li>Acompañamiento en tu primer servicio real para garantizar tu éxito.</li>
-                        </ul>
-                        <div class="alert alert-light mt-4" role="alert" style="border-left: 4px solid var(--accent-color);">
-                            <h5 class="fw-bold">Recupera tu inversión rápidamente</h5>
-                            <p class="mb-0">Este programa está diseñado para que recuperes tu inversión en tus primeras <strong>5 a 8 clientas</strong> y empieces a generar ingresos desde el inicio.</p>
+                <div class="col-lg-9">
+                    <div class="course-card">
+                        <div class="header text-center">
+                            <h2 class="mb-0">👑 Formación Exclusiva LEIRI ACADEMY</h2>
+                            <p class="lead">Un programa de élite para mujeres valientes y comprometidas.</p>
+                        </div>
+                        <div class="body">
+                            <p class="mb-5">Trabajamos con <strong>grupos ultra-reducidos de solo 4 mujeres</strong>, porque nuestro método se basa en el acompañamiento real para garantizar resultados tangibles y un éxito acelerado.</p>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h4 class="mb-3">📅 4 Días de Formación Intensiva</h4>
+                                    <h4 class="mb-3">💄 Incluye:</h4>
+                                    <ul>
+                                        <li>Práctica en modelo real.</li>
+                                        <li>Certificación profesional.</li>
+                                        <li>Materiales de práctica incluidos.</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <h4 class="mb-3">✨ Acompañamiento Premium:</h4>
+                                     <ul>
+                                        <li>Seguimiento post-curso.</li>
+                                        <li>Asesoría en tu primer servicio.</li>
+                                        <li>Plan de negocio para recuperar tu inversión en 5-8 clientas.</li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- AUDIENCE FILTERING SECTION -->
-    <section class="section filter-section bg-white">
-        <div class="container">
-            <div class="row g-4 justify-content-center">
-                <!-- Este curso NO es para ti si... -->
-                <div class="col-md-6">
-                    <div class="card h-100 border-danger border-2">
-                        <div class="card-body">
-                            <h4 class="text-danger mb-3">🚫 Este curso NO es para ti si...</h4>
-                            <ul class="list-unstyled">
-                                <li class="mb-2"><i class="fas fa-times-circle text-danger me-2"></i>Buscas resultados rápidos sin compromiso.</li>
-                                <li class="mb-2"><i class="fas fa-times-circle text-danger me-2"></i>No estás dispuesta a invertir en ti.</li>
-                                <li class="mb-2"><i class="fas fa-times-circle text-danger me-2"></i>Esperas que las oportunidades lleguen solas.</li>
-                                <li class="mb-2"><i class="fas fa-times-circle text-danger me-2"></i>Solo buscas un curso barato sin valorar la transformación.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <!-- Este curso ES para ti si... -->
-                <div class="col-md-6">
-                    <div class="card h-100 border-success border-2">
-                        <div class="card-body">
-                            <h4 class="text-success mb-3">💫 Este curso ES para ti si...</h4>
-                            <ul class="list-unstyled">
-                                <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Estás lista para invertir en ti y transformar tu vida.</li>
-                                <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Quieres aprender una técnica rentable y con propósito.</li>
-                                <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Te apasiona la belleza y deseas tener tu propio negocio.</li>
-                                <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Sabes que el éxito se logra con enfoque y acción.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
+    
     <!-- TESTIMONIALS -->
     <section class="section">
         <div class="container">
-            <h2 class="heading-font text-center mb-5">💬 Lo que dicen nuestras artistas</h2>
-            <div class="row g-4">
-                <div class="col-md-6">
-                    <div class="testimonial-card">
-                        <p class="fs-5">“Nunca imaginé recuperar mi inversión tan rápido. En menos de un mes ya tenía mis primeras clientas y había recuperado todo.”</p>
-                        <footer class="blockquote-footer mt-2">Daniela R.</footer>
-                    </div>
+            <h2 class="text-center mb-5">💬 Transformaciones Reales</h2>
+            <div class="row g-5 justify-content-center">
+                <div class="col-md-8">
+                    <blockquote class="testimonial-quote">
+                        “Nunca imaginé recuperar mi inversión tan rápido. En menos de un mes ya tenía mis primeras clientas y una agenda que comenzaba a llenarse.”
+                        <footer class="mt-3 fs-6 fw-bold">— Daniela R.</footer>
+                    </blockquote>
                 </div>
-                <div class="col-md-6">
-                    <div class="testimonial-card">
-                        <p class="fs-5">“Lo que más me gustó fue el acompañamiento. Leiri estuvo pendiente de cada detalle hasta que logré resultados reales con mis modelos.”</p>
-                        <footer class="blockquote-footer mt-2">María G.</footer>
-                    </div>
+                <div class="col-md-8">
+                    <blockquote class="testimonial-quote">
+                        “Lo que diferencia a Leiri es el acompañamiento. Estuvo pendiente de cada detalle hasta que logré resultados perfectos. No es un curso, es una mentoría.”
+                        <footer class="mt-3 fs-6 fw-bold">— María G.</footer>
+                    </blockquote>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- FOUNDER STORY -->
-    <section class="section bg-white">
+    <section class="section bg-light">
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-5 text-center">
-                    <!-- Coloca aquí una URL de tu foto -->
-                    <img src="https://via.placeholder.com/350" alt="Leiri, fundadora de Leiri Academy" class="img-fluid">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-5 text-center">
+                    <!-- Coloca aquí la URL de tu foto -->
+                    <img src="https://via.placeholder.com/400x450" alt="Leiri, fundadora de Leiri Academy" class="img-fluid founder-img">
                 </div>
-                <div class="col-md-7">
-                    <h2 class="heading-font">🌸 La historia de Leiri</h2>
-                    <p class="lead">Soy Leiri, fundadora de Leiri Academy, y sé lo que es empezar desde cero.</p>
-                    <p>Mi misión es ayudarte a descubrir que todo se logra con planificación, enfoque y constancia. En este curso te enseño no solo la técnica, sino también cómo convertir tu talento en un negocio rentable, con mi apoyo en cada paso. Porque más que enseñar micropigmentación, acompaño transformaciones reales.</p>
+                <div class="col-lg-7">
+                    <h2 class="mb-3">🌸 Mi Misión es Acompañarte</h2>
+                    <p class="lead">Soy Leiri, y sé lo que es empezar desde cero con un sueño gigante.</p>
+                    <p>Mi propósito va más allá de enseñar una técnica. Mi misión es darte el mapa completo, la confianza y el plan de acción para que conviertas tu talento en un negocio rentable y sólido. En este curso, te entrego mi método probado, mi apoyo incondicional y mi experiencia para que tu transformación sea inevitable.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- FINAL CALL TO ACTION -->
-    <section class="section cta-section" id="postulate">
+    <section class="section" id="postulate">
         <div class="container text-center">
-            <h2 class="heading-font">💎 Método Exclusivo de Leiri Academy</h2>
-            <p class="lead col-md-8 mx-auto">Este programa está diseñado para mujeres enfocadas en su crecimiento. Solo las que están dispuestas a invertir en sí mismas y a planificar su futuro podrán aprovechar esta oportunidad.</p>
-            <div class="my-4">
-                <h3 class="heading-font" style="color: var(--primary-color);">Si sientes que este es tu momento, y estás lista para formar parte de una de las 4 chicas seleccionadas...</h3>
-            </div>
+            <h2 class="mb-4">¿Sientes que este es tu momento?</h2>
+            <p class="lead col-lg-8 mx-auto">Este programa es una oportunidad exclusiva para las 4 mujeres que estén 100% decididas a invertir en sí mismas y a construir su futuro. Si estás lista, el primer paso es postularte.</p>
             
-            <div class="row justify-content-center">
-                <div class="col-lg-6">
-                    <div class="card p-4 shadow-sm">
-                        <h5 class="fw-bold">Postúlate aquí para descubrir si eres una de ellas</h5>
+            <div class="row justify-content-center mt-5">
+                <div class="col-lg-7">
+                    <div class="final-cta">
+                        <h4 class="mb-4">Descubre si eres una de las seleccionadas</h4>
                         <form>
                             <div class="mb-3">
-                                <input type="text" class="form-control" placeholder="Nombre Completo" required>
+                                <input type="text" class="form-control form-control-lg" placeholder="Nombre Completo" required>
                             </div>
                             <div class="mb-3">
-                                <input type="tel" class="form-control" placeholder="Tu número de WhatsApp (con código de país)" required>
+                                <input type="tel" class="form-control form-control-lg" placeholder="Tu número de WhatsApp (con código de país)" required>
                             </div>
-                            <button type="submit" class="btn btn-custom w-100">[QUIERO POSTULARME AHORA]</button>
+                            <button type="submit" class="btn btn-gold w-100 mt-3">QUIERO POSTULARME AHORA</button>
                         </form>
                     </div>
                 </div>
@@ -315,7 +345,7 @@
         </div>
     </section>
 
-    <footer class="text-center p-4 bg-dark text-white">
+    <footer class="footer text-center p-4">
         <p class="mb-0">&copy; 2025 Leiri Academy. Todos los derechos reservados.</p>
     </footer>
 
