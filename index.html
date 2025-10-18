@@ -2,232 +2,172 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Curso de Micropigmentación | Leiri Academy — Formación de Lujo</title>
-  <meta name="description" content="Formación exclusiva de micropigmentación en grupos ultra-reducidos. Acompañamiento premium, práctica en modelo real y plan de negocio para recuperar tu inversión." />
-  <link rel="icon" href="https://cdn.jsdelivr.net/gh/twitter/twemoji/assets/svg/2728.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Curso de Micropigmentación | Leiri Academy — Formación Premium</title>
+  <meta name="description" content="Aprende micropigmentación y construye tu propio negocio con enfoque, acompañamiento real y resultados. Grupos pequeños, práctica en modelo real y certificación." />
+
+  <!-- Favicon (opcional) -->
+  <link rel="icon" href="https://cdn.jsdelivr.net/gh/twitter/twemoji/assets/svg/1f48b.svg" />
 
   <!-- Open Graph -->
   <meta property="og:title" content="Curso de Micropigmentación — Leiri Academy" />
-  <meta property="og:description" content="Formación de lujo, grupos de 4, certificación y acompañamiento premium." />
+  <meta property="og:description" content="Formación premium en grupos pequeños. Acompañamiento personalizado para resultados reales." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=1600&auto=format&fit=crop" />
   <meta property="og:url" content="https://tusitio.com" />
 
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
 
   <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,600;6..96,700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 
   <style>
     :root{
-      --color-purple:#412368;      /* Morado profundo */
-      --color-purple-2:#2e1a4a;    /* Morado aún más oscuro */
-      --color-gold:#D4AF37;        /* Dorado clásico */
-      --color-gold-2:#E6C67C;      /* Dorado suave */
-      --color-ink:#141218;         /* Negro lujo */
-      --color-light:#F9F7FC;       /* Blanco con tinte lavanda */
-      --glass: rgba(255,255,255,0.08);
-      --font-heading:'Bodoni Moda', serif;
-      --font-body:'Inter', sans-serif;
-      --radius-xl: 22px;
-      --shadow-soft: 0 20px 60px rgba(0,0,0,.15);
-      --shadow-gold: 0 10px 35px rgba(212,175,55,.25);
+      --ink:#1a1425;              /* texto principal (muy oscuro, no negro puro) */
+      --muted:#5b5566;            /* texto secundario */
+      --surface:#ffffff;          /* base blanca */
+      --surface-2:#faf8ff;        /* blanco con tinte lila muy sutil */
+      --line:#ece8f4;             /* líneas suaves */
+      --gold:#D4AF37;             /* dorado principal */
+      --gold-2:#E6C979;           /* dorado claro para degradé */
+      --accent:#5b3a88;           /* acento suave morado (mínimo uso) */
+      --radius:18px;
+      --shadow:0 18px 40px rgba(10, 6, 18, .06);
     }
-    html { scroll-behavior:smooth; }
-    body{
-      font-family:var(--font-body);
-      color:var(--color-ink);
-      background:
-        radial-gradient(1200px 600px at 80% -10%, #5a2d99 0%, transparent 60%),
-        radial-gradient(1000px 800px at -10% 30%, #2b1748 0%, transparent 55%),
-        #0f0d14;
-      background-attachment: fixed;
-    }
-    /* Global type */
-    h1,h2,h3,h4,h5,h6{
-      font-family:var(--font-heading);
-      color:#fff;
-      letter-spacing:.2px;
-    }
-    p, li, label, input, button, small { color: #eae6f6; }
-    .lead{ color:#f2eefb; opacity:.95; }
-    .text-gold{ color:var(--color-gold); }
-    .muted{ color:#cfc7e6; }
 
-    /* Gold gradient & borders */
-    .gold-gradient{
-      background: linear-gradient(45deg,var(--color-gold-2),var(--color-gold));
-      -webkit-background-clip:text; background-clip:text; color:transparent;
+    html{ scroll-behavior:smooth; }
+    body{
+      font-family:'Manrope',system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,'Helvetica Neue',Arial;
+      color:var(--ink);
+      background: var(--surface-2);
     }
-    .divider{
-      width:120px; height:2px; margin:1rem auto 0;
-      background: linear-gradient(90deg, transparent, var(--color-gold), transparent);
-      border-radius:999px;
+    h1,h2,h3,h4,h5{
+      font-family:'Cormorant Garamond',serif;
+      letter-spacing:.2px;
+      color:var(--ink);
     }
-    .border-gold{
-      border:1px solid rgba(214,183,74,.35);
-      box-shadow: inset 0 0 0 1px rgba(255,255,255,.03);
-    }
+    .lead{ color:#3a3347; }
+    .text-muted{ color:var(--muted)!important; }
 
     /* Navbar */
     .navbar{
-      --bs-navbar-color:#ece7fa;
-      --bs-navbar-hover-color:#fff;
-      backdrop-filter: blur(10px);
-      background: rgba(18,14,24,.35);
-      border-bottom: 1px solid rgba(255,255,255,.06);
-    }
-    .navbar.scrolled{
-      background: rgba(10,8,14,.72);
-      box-shadow: 0 8px 30px rgba(0,0,0,.35);
+      background: rgba(255,255,255,.85);
+      backdrop-filter: blur(8px);
+      border-bottom:1px solid var(--line);
     }
     .navbar-brand{
-      font-family:var(--font-heading);
-      font-size: clamp(1.2rem, 2vw, 1.6rem);
-      color:#fff!important;
-      letter-spacing:.5px;
+      font-family:'Cormorant Garamond',serif;
+      font-weight:700;
+      letter-spacing:.4px;
     }
-    .nav-link{ font-weight:600; }
+
+    /* Utility */
+    .section{ padding: clamp(56px, 7vw, 96px) 0; }
+    .container-narrow{ max-width: 980px; }
+    .eyebrow{
+      display:inline-flex; align-items:center; gap:.5rem;
+      font-weight:700; font-size:.9rem;
+      background: #fff; border:1px solid var(--line);
+      border-radius:999px; padding:8px 14px;
+      color:#3a3347;
+    }
+    .divider{
+      width:110px; height:2px; margin:1rem auto 0;
+      background: linear-gradient(90deg,transparent,var(--gold),transparent);
+      border-radius:999px;
+    }
 
     /* Buttons */
     .btn-gold{
-      font-weight:700; text-transform:uppercase; letter-spacing:1.4px;
-      background: linear-gradient(135deg, var(--color-gold-2), var(--color-gold));
-      color:#0d0b12; border:none; border-radius:999px;
-      padding:14px 28px; box-shadow: var(--shadow-gold);
-      transition: transform .25s ease, box-shadow .25s ease, filter .25s ease;
+      background: linear-gradient(135deg,var(--gold-2),var(--gold));
+      color:#1b1327; font-weight:800; letter-spacing:.8px;
+      border:none; border-radius:999px; padding:12px 22px;
+      box-shadow: 0 10px 28px rgba(212,175,55,.25);
+      transition: transform .2s ease, filter .2s ease;
+      text-transform: uppercase; font-size:.9rem;
     }
-    .btn-gold:hover{ transform: translateY(-3px); filter: brightness(1.05); }
-    .btn-outline-gold{
-      border-radius:999px; padding:12px 22px; font-weight:700;
-      border:1px solid var(--color-gold); color:#fff;
+    .btn-gold:hover{ transform: translateY(-2px); filter:brightness(1.05); }
+    .btn-outline-dark{
+      border-radius:999px; padding:12px 20px; font-weight:700;
     }
-    .btn-outline-gold:hover{ background:var(--color-gold); color:#0e0c12; }
 
     /* Hero */
     .hero{
-      position:relative; padding: min(12vh, 120px) 0 min(14vh, 140px);
-      overflow:hidden;
-    }
-    .hero::after{
-      content:""; position:absolute; inset:0;
-      background: radial-gradient(800px 400px at 10% 10%, rgba(212,175,55,.08), transparent 60%),
-                  radial-gradient(600px 300px at 85% 25%, rgba(255,255,255,.06), transparent 55%);
-      pointer-events:none;
+      background:
+        radial-gradient(1000px 400px at 10% -10%, rgba(255,214,121,.20), transparent 60%),
+        radial-gradient(700px 300px at 90% 0%, rgba(178,155,255,.15), transparent 55%),
+        linear-gradient(180deg,#ffffff, #fbfaff);
     }
     .hero-card{
-      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
-      border: 1px solid rgba(255,255,255,.12);
-      box-shadow: var(--shadow-soft);
-      border-radius: var(--radius-xl);
-      padding: clamp(24px, 4vw, 40px);
-      backdrop-filter: blur(10px);
+      background:#fff; border:1px solid var(--line); border-radius:var(--radius);
+      box-shadow: var(--shadow); padding: clamp(20px, 4vw, 36px);
     }
-    .eyebrow{
-      display:inline-flex; gap:.5rem; align-items:center;
-      padding:8px 14px; border-radius:999px;
-      background: rgba(212,175,55,.12); border:1px solid rgba(212,175,55,.35);
-      color:#fff; font-weight:700; letter-spacing:1px; font-size:.85rem;
-    }
-    .hero h1{
-      font-size: clamp(2.1rem, 5vw, 4.2rem);
-      line-height:1.12; margin-top:1rem;
-    }
+    .hero h1{ font-size: clamp(2rem, 6.3vw, 3.6rem); line-height:1.12; }
 
-    /* Sections */
-    section.section{ padding: clamp(60px, 9vw, 110px) 0; }
-    .section-light{
-      background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,0));
-      border-top:1px solid rgba(255,255,255,.06);
-      border-bottom:1px solid rgba(255,255,255,.06);
-    }
-
-    /* Feature cards */
+    /* Features */
     .feature{
-      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
-      border:1px solid rgba(255,255,255,.12);
-      border-radius:18px; padding:28px; height:100%;
-      transition: transform .25s ease, box-shadow .25s ease, background .25s ease;
+      background:#fff; border:1px solid var(--line); border-radius: 16px;
+      padding:22px; height:100%; box-shadow: var(--shadow);
     }
-    .feature:hover{ transform: translateY(-6px); box-shadow: var(--shadow-soft); }
     .feature .icon{
-      width:56px; height:56px; display:grid; place-items:center;
-      border-radius:14px; background: rgba(212,175,55,.2); margin-bottom:14px;
-      border: 1px solid rgba(212,175,55,.4);
-    }
-    .feature .icon i{ color:var(--color-gold); font-size:1.2rem; }
-
-    /* Course card */
-    .course-card{
-      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
-      border:1px solid rgba(255,255,255,.12);
-      border-radius: var(--radius-xl); overflow:hidden;
-      box-shadow: var(--shadow-soft);
-    }
-    .course-card .header{ background: rgba(255,255,255,.05); padding:2rem; }
-    .course-card .body{ padding: clamp(20px, 4vw, 38px); }
-    .course-card ul{ list-style:none; padding-left:0; margin:0; }
-    .course-card li{ position:relative; padding-left:34px; margin-bottom:.9rem; }
-    .course-card li::before{
-      content:"\f005"; font-family:"Font Awesome 6 Free"; font-weight:900;
-      color:var(--color-gold); position:absolute; left:0; top:2px;
+      width:52px; height:52px; border-radius:14px; display:grid; place-items:center;
+      background: linear-gradient(135deg, rgba(230,201,121,.25), rgba(212,175,55,.25));
+      border:1px solid rgba(212,175,55,.45); margin-bottom:10px;
+      color:#2a2237;
     }
 
-    /* Testimonials */
-    .testimonial{
-      position:relative; background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
-      border:1px solid rgba(255,255,255,.12); border-radius:18px; padding:28px;
+    /* Cards */
+    .card-soft{
+      background:#fff; border:1px solid var(--line); border-radius:var(--radius);
+      box-shadow: var(--shadow);
     }
-    .testimonial:before{
-      content:"“"; position:absolute; font-family: var(--font-heading);
-      left:16px; top:-20px; font-size:4rem; color: rgba(212,175,55,.45);
+
+    /* Lists with icons */
+    .list-check{ list-style:none; padding-left:0; }
+    .list-check li{
+      position:relative; padding-left:32px; margin-bottom:.8rem;
     }
-    .avatar{
-      width:54px; height:54px; border-radius:50%; border:1px solid rgba(255,255,255,.25);
-      object-fit:cover;
+    .list-check li:before{
+      content:"\f00c"; font-family:"Font Awesome 6 Free"; font-weight:900;
+      color:var(--gold); position:absolute; left:0; top:0.15rem;
+    }
+    .list-cross{ list-style:none; padding-left:0; }
+    .list-cross li{ position:relative; padding-left:32px; margin-bottom:.8rem; }
+    .list-cross li:before{
+      content:"\f057"; font-family:"Font Awesome 6 Free"; font-weight:900;
+      color:#b95c5c; position:absolute; left:0; top:0.15rem;
     }
 
     /* Founder */
     .founder-img{
-      max-width: 420px; width:100%; border-radius:20px;
-      box-shadow: 15px 15px 0 var(--color-gold);
+      width:100%; max-width:420px; border-radius:14px;
+      box-shadow: 10px 10px 0 var(--gold);
     }
 
-    /* Final CTA */
-    .final-cta{
-      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
-      border:1px solid rgba(255,255,255,.12); border-radius: 20px; padding: 32px;
-    }
+    /* Form */
     .form-control{
-      background: rgba(255,255,255,.06)!important; border:1px solid rgba(255,255,255,.18)!important;
-      color:#fff!important; border-radius:14px; padding:14px 16px;
+      background:#fff; border:1px solid var(--line); padding:14px 14px; border-radius:12px;
     }
-    .form-control::placeholder{ color:#d8d0ed; opacity:.7; }
-    .form-check-label{ color:#ddd; }
+    .form-control::placeholder{ color:#9a94a6; }
+    .final-cta{ padding:24px; }
 
     /* Footer */
     .footer{
-      background: #0b0910; color:#cfc7e6; border-top:1px solid rgba(255,255,255,.06);
+      border-top:1px solid var(--line);
+      background:#ffffff;
     }
 
-    /* Back to top */
-    .back-to-top{
-      position:fixed; right:18px; bottom:18px; z-index:9999; opacity:0; visibility:hidden;
-      transition: .25s ease; border:1px solid rgba(212,175,55,.5);
-      background: rgba(212,175,55,.2); color:#fff;
+    /* Small helpers */
+    .badge-soft{
+      background:#fff; border:1px solid var(--line); border-radius:999px; padding:6px 10px;
+      font-size:.8rem; color:#3c3450;
     }
-    .back-to-top.show{ opacity:1; visibility:visible; }
-
-    /* Reveal on scroll */
-    .reveal{ opacity:0; transform: translateY(18px); transition: .6s ease; }
-    .reveal.visible{ opacity:1; transform:none; }
   </style>
 
   <!-- JSON-LD -->
@@ -236,32 +176,29 @@
     "@context":"https://schema.org",
     "@type":"Course",
     "name":"Curso de Micropigmentación — Leiri Academy",
-    "description":"Formación exclusiva con grupos de 4, práctica en modelo real, certificación y acompañamiento premium.",
+    "description":"Formación premium en grupos pequeños con práctica en modelo real, certificación y acompañamiento personalizado.",
     "provider":{"@type":"Organization","name":"Leiri Academy"},
-    "offers":{"@type":"Offer","priceCurrency":"USD","price":"0","availability":"https://schema.org/InStock"}
+    "offers":{"@type":"Offer","priceCurrency":"USD","availability":"https://schema.org/InStock"}
   }
   </script>
 </head>
 <body>
 
   <!-- NAVBAR -->
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top py-2" aria-label="Navegación principal">
+  <nav class="navbar navbar-expand-lg sticky-top py-2">
     <div class="container">
-      <a class="navbar-brand" href="#inicio" aria-label="Ir al inicio">
-        LEIRI <span class="gold-gradient">ACADEMY</span>
-      </a>
+      <a class="navbar-brand" href="#inicio">LEIRI ACADEMY</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Abrir menú">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="nav">
+      <div id="nav" class="collapse navbar-collapse">
         <ul class="navbar-nav ms-auto align-items-lg-center">
-          <li class="nav-item"><a class="nav-link" href="#oportunidad">Oportunidad</a></li>
-          <li class="nav-item"><a class="nav-link" href="#programa">Programa</a></li>
+          <li class="nav-item"><a class="nav-link" href="#oportunidad">La industria</a></li>
+          <li class="nav-item"><a class="nav-link" href="#curso">El curso</a></li>
+          <li class="nav-item"><a class="nav-link" href="#para-quien">¿Es para ti?</a></li>
           <li class="nav-item"><a class="nav-link" href="#testimonios">Testimonios</a></li>
           <li class="nav-item"><a class="nav-link" href="#fundadora">Fundadora</a></li>
-          <li class="nav-item ms-lg-3">
-            <a href="#postulate" class="btn btn-gold">Postularme</a>
-          </li>
+          <li class="nav-item ms-lg-3"><a href="#postulate" class="btn btn-gold">Postularme</a></li>
         </ul>
       </div>
     </div>
@@ -270,160 +207,150 @@
   <!-- HERO -->
   <header id="inicio" class="hero section">
     <div class="container">
-      <div class="row justify-content-center g-4">
+      <div class="row justify-content-center">
         <div class="col-xl-9">
-          <div class="hero-card border-gold reveal">
-            <span class="eyebrow"><i class="fa-solid fa-gem"></i> Formación de lujo</span>
-            <h1 class="mt-2">
-              Conviértete en Artista de Micropigmentación y
-              <span class="gold-gradient">diseña tu futuro</span>.
-            </h1>
-            <p class="lead mt-3 col-lg-10">
-              Un programa exclusivo para mujeres decididas a construir un negocio rentable, con propósito y libertad, partiendo desde cero.
-            </p>
-            <div class="d-flex flex-wrap gap-2 mt-3">
-              <a href="#postulate" class="btn btn-gold">Postúlate ahora</a>
-              <a href="#programa" class="btn btn-outline-gold"><i class="fa-solid fa-arrow-down-long me-2"></i>Ver el programa</a>
+          <div class="hero-card">
+            <span class="eyebrow"><i class="fa-solid fa-gem"></i> Formación premium</span>
+            <h1 class="mt-2">💋 ¿Quieres aprender micropigmentación y comenzar tu propio negocio con enfoque y resultados reales?</h1>
+            <p class="lead mt-2 mb-3">Formación enfocada en resultados, con grupos pequeños, acompañamiento personalizado y una ruta clara para recuperar tu inversión.</p>
+            <div class="d-flex flex-wrap gap-2">
+              <a href="#postulate" class="btn btn-gold">Quiero postularme</a>
+              <a href="#curso" class="btn btn-outline-dark">Ver detalles</a>
             </div>
           </div>
         </div>
       </div>
-      <div class="divider"></div>
     </div>
   </header>
 
-  <!-- OPORTUNIDAD -->
-  <section id="oportunidad" class="section section-light">
-    <div class="container text-center">
-      <h2 class="mb-3">💎 La belleza: tu mejor inversión</h2>
-      <p class="muted col-lg-8 mx-auto">Entra a una industria en crecimiento con alta demanda de artistas profesionales y márgenes premium.</p>
-      <div class="row g-4 mt-4">
-        <div class="col-md-4 reveal">
-          <div class="feature h-100">
+  <!-- INDUSTRIA / OPORTUNIDAD -->
+  <section id="oportunidad" class="section">
+    <div class="container container-narrow text-center">
+      <h2 class="mb-3">💎 El mundo de la belleza no se detiene</h2>
+      <p class="text-muted">La industria de la belleza mueve miles de millones cada año y sigue creciendo. Dentro de este mercado, la <strong>micropigmentación</strong> se ha convertido en una de las profesiones más rentables y demandadas. Es un arte, una técnica y una oportunidad real de independencia económica.</p>
+      <div class="row g-3 mt-3">
+        <div class="col-6 col-md-4">
+          <div class="feature text-start h-100">
             <div class="icon"><i class="fa-solid fa-chart-line"></i></div>
-            <h5>Mercado en expansión</h5>
-            <p class="mb-0">Demanda constante por procedimientos semipermanentes con ticket elevado.</p>
+            <h6 class="mb-1">Alta demanda</h6>
+            <small class="text-muted">Clientes recurrentes y tickets premium.</small>
           </div>
         </div>
-        <div class="col-md-4 reveal">
-          <div class="feature h-100">
+        <div class="col-6 col-md-4">
+          <div class="feature text-start h-100">
             <div class="icon"><i class="fa-solid fa-crown"></i></div>
-            <h5>Profesión de alto valor</h5>
-            <p class="mb-0">Habilidad rentable con posicionamiento premium y clientes recurrentes.</p>
+            <h6 class="mb-1">Profesión rentable</h6>
+            <small class="text-muted">Habilidad de alto valor percibido.</small>
           </div>
         </div>
-        <div class="col-md-4 reveal">
-          <div class="feature h-100">
-            <div class="icon"><i class="fa-solid fa-feather-pointed"></i></div>
-            <h5>Independencia real</h5>
-            <p class="mb-0">Crea tu marca, gestiona tu agenda y escala a tu ritmo.</p>
+        <div class="col-12 col-md-4">
+          <div class="feature text-start h-100">
+            <div class="icon"><i class="fa-solid fa-briefcase"></i></div>
+            <h6 class="mb-1">Independencia</h6>
+            <small class="text-muted">Crea tu marca y agenda.</small>
           </div>
         </div>
       </div>
+      <div class="divider"></div>
     </div>
   </section>
 
   <!-- TRANSFORMACIÓN -->
   <section class="section">
-    <div class="container col-lg-9 text-center">
-      <h2 class="mb-3">💖 Más que técnica: una transformación de vida</h2>
-      <p class="lead">La micropigmentación es el vehículo para transformar tu vida y la de otras mujeres. Te damos el método, la mentoría y el plan para convertir tu talento en un negocio sólido.</p>
-      <div class="divider"></div>
+    <div class="container container-narrow text-center">
+      <h2 class="mb-2">💖 La micropigmentación: más que una técnica, una transformación</h2>
+      <p class="lead">No solo aprendes una técnica: construyes una nueva realidad. Con planificación y acompañamiento, lo que hoy es un sueño puede convertirse en tu nuevo estilo de vida.</p>
     </div>
   </section>
 
-  <!-- PROGRAMA -->
-  <section id="programa" class="section">
+  <!-- CURSO -->
+  <section id="curso" class="section">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-lg-10">
-          <div class="course-card">
-            <div class="header text-center">
-              <h2 class="mb-0">👑 Formación Exclusiva LEIRI ACADEMY</h2>
-              <p class="lead muted">Grupos ultra-reducidos de <span class="text-gold fw-bold">4 mujeres</span> para acompañamiento real y resultados acelerados.</p>
+          <div class="card-soft p-4 p-md-5">
+            <div class="text-center mb-3">
+              <h2 class="mb-1">👑 Curso de Micropigmentación LEIRI ACADEMY</h2>
+              <p class="text-muted mb-0">Trabajamos con <strong>grupos pequeños</strong> porque cada mujer merece acompañamiento real y resultados tangibles. Aquí formamos mujeres valientes, decididas y comprometidas a cambiar su historia.</p>
             </div>
-            <div class="body">
-              <div class="row g-4">
-                <div class="col-md-6">
-                  <h4 class="mb-3">📅 4 días de formación intensiva</h4>
-                  <ul>
-                    <li>Práctica en modelo real.</li>
-                    <li>Certificación profesional.</li>
-                    <li>Materiales de práctica incluidos.</li>
-                  </ul>
-                </div>
-                <div class="col-md-6">
-                  <h4 class="mb-3">✨ Acompañamiento premium</h4>
-                  <ul>
-                    <li>Seguimiento post-curso.</li>
-                    <li>Asesoría en tu primer servicio.</li>
-                    <li>Plan de negocio para recuperar tu inversión en 5–8 clientas.</li>
+            <div class="row g-4 mt-2">
+              <div class="col-md-6">
+                <div class="feature h-100">
+                  <h5 class="mb-2">📅 Duración: 4 días de formación intensiva</h5>
+                  <ul class="list-check mb-0">
+                    <li>Práctica en modelo real</li>
+                    <li>Certificación profesional</li>
+                    <li>Materiales de práctica incluidos</li>
+                    <li>Seguimiento personalizado después del curso</li>
+                    <li>Acompañamiento en tu primer servicio real</li>
                   </ul>
                 </div>
               </div>
-
-              <!-- Mini FAQ bullets -->
-              <div class="row g-4 mt-2">
-                <div class="col-md-4">
-                  <div class="feature">
-                    <div class="icon"><i class="fa-solid fa-users"></i></div>
-                    <h6 class="mb-1">Cupo limitado</h6>
-                    <p class="mb-0 muted">Solo 4 plazas por edición para atención 1:1.</p>
-                  </div>
+              <div class="col-md-6">
+                <div class="feature h-100">
+                  <h5 class="mb-2">🗺️ Resultados y retorno</h5>
+                  <p class="mb-2">Programa diseñado para que <strong>recuperes tu inversión</strong> en tus primeras <strong>5 a 8 clientas</strong> y empieces a generar ingresos desde el inicio.</p>
+                  <span class="badge-soft"><i class="fa-solid fa-users me-1"></i> Grupos reducidos (máx. 4)</span>
                 </div>
-                <div class="col-md-4">
-                  <div class="feature">
-                    <div class="icon"><i class="fa-solid fa-shield-heart"></i></div>
-                    <h6 class="mb-1">Método probado</h6>
-                    <p class="mb-0 muted">Estandarizado para resultados consistentes.</p>
-                  </div>
-                </div>
-                <div class="col-md-4">
-                  <div class="feature">
-                    <div class="icon"><i class="fa-solid fa-calendar-check"></i></div>
-                    <h6 class="mb-1">Agenda inteligente</h6>
-                    <p class="mb-0 muted">Guías de captación y precios premium.</p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="text-center mt-4">
-                <a href="#postulate" class="btn btn-gold">Quiero postularme</a>
               </div>
             </div>
-          </div><!--/course-card-->
+            <div class="text-center mt-4">
+              <a href="#postulate" class="btn btn-gold">Postularme</a>
+            </div>
+          </div><!-- /card-soft -->
         </div>
       </div>
     </div>
   </section>
 
-  <!-- TESTIMONIOS -->
-  <section id="testimonios" class="section section-light">
+  <!-- PARA QUIÉN / NO ES PARA TI -->
+  <section id="para-quien" class="section">
     <div class="container">
-      <h2 class="text-center mb-4">💬 Transformaciones reales</h2>
-      <div class="row g-4 justify-content-center">
-        <div class="col-lg-8">
-          <div class="testimonial">
-            <div class="d-flex align-items-center gap-3 mb-2">
-              <img class="avatar" loading="lazy" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=300&auto=format&fit=crop" alt="Foto de Daniela R." />
-              <div>
-                <strong>Daniela R.</strong>
-                <div class="muted small">Alumna</div>
-              </div>
-            </div>
-            <p class="mb-0">“Nunca imaginé recuperar mi inversión tan rápido. En menos de un mes ya tenía mis primeras clientas y una agenda que comenzaba a llenarse.”</p>
+      <div class="row g-4">
+        <div class="col-lg-6">
+          <div class="card-soft p-4 h-100">
+            <h3 class="mb-3">🚫 Este curso no es para ti si…</h3>
+            <ul class="list-cross mb-0">
+              <li>Buscas resultados rápidos sin compromiso.</li>
+              <li>No estás dispuesta a invertir en ti ni a planificar tu crecimiento.</li>
+              <li>Esperas que las oportunidades lleguen solas.</li>
+              <li>Solo estás buscando opciones de cursos, sin intención real de crecer.</li>
+              <li>Buscas un curso barato sin considerar el valor y la transformación que puede generar.</li>
+            </ul>
           </div>
         </div>
-        <div class="col-lg-8">
-          <div class="testimonial">
-            <div class="d-flex align-items-center gap-3 mb-2">
-              <img class="avatar" loading="lazy" src="https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?q=80&w=300&auto=format&fit=crop" alt="Foto de María G." />
-              <div>
-                <strong>María G.</strong>
-                <div class="muted small">Alumna</div>
-              </div>
-            </div>
-            <p class="mb-0">“Lo que diferencia a Leiri es el acompañamiento. Estuvo pendiente de cada detalle hasta que logré resultados perfectos. No es un curso, es una mentoría.”</p>
+        <div class="col-lg-6">
+          <div class="card-soft p-4 h-100">
+            <h3 class="mb-3">💫 Este curso es para ti si…</h3>
+            <ul class="list-check mb-0">
+              <li>Estás lista para invertir en ti y transformar tu vida profesional.</li>
+              <li>Quieres aprender una técnica rentable y con propósito.</li>
+              <li>Te apasiona la belleza y deseas tener tu propio negocio.</li>
+              <li>Sabes que el éxito se logra con enfoque, disciplina y acción.</li>
+              <li>Quieres pertenecer a un grupo exclusivo con acompañamiento personalizado para alcanzar resultados reales.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-4"><a class="btn btn-outline-dark" href="#postulate">Aplicar ahora</a></div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIOS -->
+  <section id="testimonios" class="section">
+    <div class="container container-narrow">
+      <h2 class="text-center mb-4">💬 Testimonios</h2>
+      <div class="row g-4 justify-content-center">
+        <div class="col-md-10">
+          <div class="card-soft p-4">
+            <p class="mb-1">“Nunca imaginé recuperar mi inversión tan rápido. En menos de un mes ya tenía mis primeras clientas.”</p>
+            <div class="text-end"><strong>— Daniela R.</strong></div>
+          </div>
+        </div>
+        <div class="col-md-10">
+          <div class="card-soft p-4">
+            <p class="mb-1">“Lo que más me gustó fue el acompañamiento. Leiri estuvo pendiente de cada detalle hasta que logré resultados reales.”</p>
+            <div class="text-end"><strong>— María G.</strong></div>
           </div>
         </div>
       </div>
@@ -433,53 +360,65 @@
   <!-- FUNDADORA -->
   <section id="fundadora" class="section">
     <div class="container">
-      <div class="row align-items-center g-5">
+      <div class="row align-items-center g-4">
         <div class="col-lg-5 text-center">
-          <img class="founder-img" loading="lazy" src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?q=80&w=800&auto=format&fit=crop" alt="Leiri, fundadora de Leiri Academy" />
+          <!-- Reemplaza con tu foto -->
+          <img class="founder-img" loading="lazy" src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?q=80&w=900&auto=format&fit=crop" alt="Leiri, fundadora de Leiri Academy">
         </div>
         <div class="col-lg-7">
-          <h2 class="mb-3">🌸 Mi misión es acompañarte</h2>
-          <p class="lead">Soy Leiri, y sé lo que es empezar desde cero con un sueño gigante.</p>
-          <p class="muted">Mi propósito va más allá de enseñar una técnica. Te doy el mapa completo, la confianza y el plan de acción para convertir tu talento en un negocio rentable. Aquí recibes mi método probado, mi apoyo incondicional y mi experiencia para que tu transformación sea inevitable.</p>
-          <a href="#postulate" class="btn btn-outline-gold mt-2">Aplicar al programa</a>
+          <h2 class="mb-2">🌸 La historia de Leiri</h2>
+          <p class="lead">Soy Leiri, fundadora de Leiri Academy, y sé lo que es empezar desde cero.</p>
+          <p class="text-muted">Mi misión es ayudarte a descubrir que todo se logra con planificación, enfoque y constancia. En este curso te enseño no solo la técnica, sino también cómo convertir tu talento en un negocio rentable, con mi apoyo en cada paso. Porque más que enseñar micropigmentación, acompaño transformaciones reales.</p>
+          <div class="d-flex gap-2 flex-wrap">
+            <span class="badge-soft"><i class="fa-solid fa-user-check me-1"></i> Acompañamiento 1:1</span>
+            <span class="badge-soft"><i class="fa-solid fa-certificate me-1"></i> Certificación</span>
+            <span class="badge-soft"><i class="fa-solid fa-people-group me-1"></i> Grupos de 4</span>
+          </div>
+          <a href="#postulate" class="btn btn-gold mt-3">Postularme</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- FINAL CTA / FORM -->
+  <!-- MÉTODO -->
+  <section class="section">
+    <div class="container container-narrow text-center">
+      <h2 class="mb-2">💎 Método de Leiri Academy</h2>
+      <p class="text-muted">Este programa está diseñado para mujeres enfocadas en su crecimiento y transformación. Solo quienes están dispuestas a invertir en sí mismas y a planificar su futuro podrán aprovechar esta oportunidad. Si sientes que este es tu momento y estás lista para formar parte de una de las <strong>4 chicas seleccionadas</strong>, postúlate abajo.</p>
+      <div class="divider"></div>
+    </div>
+  </section>
+
+  <!-- CTA / FORMULARIO -->
   <section id="postulate" class="section">
     <div class="container text-center">
-      <h2 class="mb-3">¿Sientes que este es tu momento?</h2>
-      <p class="lead col-lg-8 mx-auto">Programa exclusivo para <span class="text-gold">4 mujeres</span> listas para invertir en sí mismas. Si estás preparada, da el primer paso.</p>
-      <div class="row justify-content-center mt-4">
+      <div class="row justify-content-center">
         <div class="col-lg-7">
-          <div class="final-cta">
-            <h4 class="mb-3">Descubre si eres una de las seleccionadas</h4>
-            <form id="applyForm" novalidate aria-label="Formulario de postulación">
+          <div class="card-soft final-cta">
+            <h3 class="mb-2">💬 Postúlate aquí</h3>
+            <p class="text-muted mb-3">Déjanos tus datos para descubrir si eres una de las seleccionadas.</p>
+            <form id="applyForm" novalidate>
               <div class="mb-3 text-start">
                 <label for="name" class="form-label">Nombre completo</label>
-                <input id="name" name="name" type="text" class="form-control form-control-lg" placeholder="Ej. Ana Rodríguez" required />
-                <div class="invalid-feedback">Por favor, escribe tu nombre completo.</div>
+                <input id="name" name="name" type="text" class="form-control form-control-lg" placeholder="Ej. Ana Rodríguez" required>
+                <div class="invalid-feedback">Escribe tu nombre completo.</div>
               </div>
               <div class="mb-3 text-start">
                 <label for="phone" class="form-label">Tu WhatsApp (con código de país)</label>
-                <input id="phone" name="phone" type="tel" class="form-control form-control-lg" placeholder="Ej. +52 55 1234 5678" required />
+                <input id="phone" name="phone" type="tel" class="form-control form-control-lg" placeholder="Ej. +52 55 1234 5678" required>
                 <div class="invalid-feedback">Incluye tu número con código de país.</div>
               </div>
               <div class="mb-3 text-start">
-                <label for="goal" class="form-label">¿Qué te gustaría lograr con este curso?</label>
-                <input id="goal" name="goal" type="text" class="form-control form-control-lg" placeholder="Cuéntame tu objetivo principal" />
+                <label for="goal" class="form-label">¿Qué te gustaría lograr con este curso? (opcional)</label>
+                <input id="goal" name="goal" type="text" class="form-control form-control-lg" placeholder="Cuéntanos tu objetivo principal">
               </div>
               <div class="form-check text-start mb-3">
-                <input class="form-check-input" type="checkbox" value="" id="consent" required />
-                <label class="form-check-label" for="consent">
-                  Acepto ser contactada vía WhatsApp para continuar mi proceso.
-                </label>
+                <input class="form-check-input" type="checkbox" value="" id="consent" required>
+                <label class="form-check-label" for="consent">Acepto ser contactada vía WhatsApp para continuar mi proceso.</label>
                 <div class="invalid-feedback">Debes aceptar para continuar.</div>
               </div>
-              <button type="submit" class="btn btn-gold w-100 mt-1">Quiero postularme ahora</button>
-              <small class="d-block mt-3 muted">Tus datos se usan únicamente para gestionar tu postulación.</small>
+              <button type="submit" class="btn btn-gold w-100">QUIERO POSTULARME AHORA</button>
+              <small class="d-block mt-3 text-muted">Tus datos se usan únicamente para gestionar tu postulación.</small>
             </form>
           </div>
         </div>
@@ -488,47 +427,17 @@
   </section>
 
   <!-- FOOTER -->
-  <footer class="footer text-center py-4">
-    <div class="container">
+  <footer class="footer py-4">
+    <div class="container text-center">
       <p class="mb-1">&copy; 2025 Leiri Academy. Todos los derechos reservados.</p>
-      <small class="muted">Hecho con excelencia y propósito.</small>
+      <small class="text-muted">Servicio premium con propósito.</small>
     </div>
   </footer>
 
-  <!-- Back to top -->
-  <button id="backTop" class="btn back-to-top" aria-label="Volver arriba">
-    <i class="fa-solid fa-arrow-up"></i>
-  </button>
-
-  <!-- Bootstrap JS -->
+  <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
-  <!-- Interactions -->
   <script>
-    // Navbar style on scroll
-    const nav = document.querySelector('.navbar');
-    const backTop = document.getElementById('backTop');
-    const onScroll = () => {
-      if (window.scrollY > 8) nav.classList.add('scrolled');
-      else nav.classList.remove('scrolled');
-      if (window.scrollY > 300) backTop.classList.add('show');
-      else backTop.classList.remove('show');
-    };
-    window.addEventListener('scroll', onScroll); onScroll();
-
-    // Back to top
-    backTop.addEventListener('click', () => window.scrollTo({ top:0, behavior:'smooth' }));
-
-    // Reveal on scroll (IntersectionObserver)
-    const revealEls = document.querySelectorAll('.reveal');
-    const io = new IntersectionObserver((entries)=>{
-      entries.forEach(e=>{
-        if(e.isIntersecting){ e.target.classList.add('visible'); io.unobserve(e.target); }
-      });
-    },{ threshold:.15 });
-    revealEls.forEach(el=>io.observe(el));
-
-    // Form validation + WhatsApp handoff
+    // Validación + envío a WhatsApp (reemplaza el número de destino)
     const form = document.getElementById('applyForm');
     form.addEventListener('submit', (e)=>{
       e.preventDefault();
@@ -537,12 +446,11 @@
         form.classList.add('was-validated');
         return;
       }
-      const name = encodeURIComponent(document.getElementById('name').value.trim());
-      const phone = document.getElementById('phone').value.replace(/\s+/g,'');
-      const goal = encodeURIComponent(document.getElementById('goal').value.trim());
-      // Cambia el número de destino por el de tu asesoría
-      const asesor = '5491112345678'; // <-- Número de WhatsApp destino (con país, sin +)
-      const text = `Hola, soy ${name}. Quiero postularme al Curso de Micropigmentación. Mi WhatsApp es ${phone}. ${goal ? 'Objetivo: '+decodeURIComponent(goal) : ''}`;
+      const asesor = '5491112345678'; // <-- pon aquí tu número sin "+" (país+número)
+      const name = document.getElementById('name').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const goal = document.getElementById('goal').value.trim();
+      const text = `Hola, soy ${name}. Quiero postularme al Curso de Micropigmentación. Mi WhatsApp es ${phone}. ${goal ? 'Objetivo: '+goal : ''}`;
       const url = `https://wa.me/${asesor}?text=${encodeURIComponent(text)}`;
       window.open(url, '_blank');
     });
