@@ -3,173 +3,312 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formación Profesional en Micropigmentación</title>
+    <title>Curso de Micropigmentación - Leiri Academy</title>
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <style>
+        :root {
+            --primary-color: #D3A7A7; /* Rosado suave */
+            --secondary-color: #333333; /* Gris oscuro / Negro */
+            --accent-color: #C0986D; /* Dorado/Bronce */
+            --bg-light: #FDFBF8;
+        }
+
         body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #FDFBF8; /* Crema muy claro */
-            color: #4B3F3F; /* Marrón oscuro */
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--secondary-color);
         }
-        h1, h2, h3, .playfair {
-            font-family: 'Playfair Display', serif;
-            color: #8C3B3B; /* Color vino/borgoña */
+
+        h1, h2, h3, .heading-font {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 700;
         }
-        .navbar-brand, .nav-link {
-            color: #8C3B3B !important;
-            font-weight: 500;
-        }
-        .header-bg {
-            background-color: #8C3B3B; /* Fondo vino */
-        }
-        .hero {
+
+        .section {
             padding: 80px 20px;
-            text-align: center;
         }
-        .hero h1 {
-            font-size: 3.5rem;
-            color: #8C3B3B;
-        }
-        .hero .lead {
-            font-size: 1.5rem;
-        }
+
         .btn-custom {
-            background-color: #8C3B3B;
+            background-color: var(--secondary-color);
             color: white;
+            border: 2px solid var(--secondary-color);
             border-radius: 50px;
-            padding: 12px 30px;
+            padding: 12px 35px;
             font-weight: 500;
             transition: all 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
+
         .btn-custom:hover {
-            transform: scale(1.05);
-            background-color: #6a2c2c;
-            color: white;
+            background-color: transparent;
+            color: var(--secondary-color);
+            transform: translateY(-3px);
         }
-        .section {
-            padding: 60px 20px;
-        }
-        .pain-point-box {
-            border: 2px solid #D3B8B8;
-            padding: 15px 25px;
-            border-radius: 15px;
-            margin-bottom: 15px;
+
+        /* --- Secciones Específicas --- */
+        .hero {
             text-align: center;
+            background-color: white;
         }
-        .itinerary-item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 15px;
+
+        .hero h1 {
+            font-size: 3.8rem;
         }
-        .itinerary-item::before {
-            content: '✨'; /* O usa un ícono de SVG/FontAwesome */
-            margin-right: 15px;
-            font-size: 1.5rem;
+
+        .market-section {
+            background-color: white;
         }
-        .cta-final {
-            background-color: #8C3B3B;
-            color: #FDFBF8;
+
+        .market-section .icon {
+            font-size: 3rem;
+            color: var(--primary-color);
         }
-        .cta-final h2 {
-            color: #FDFBF8;
-        }
-        .btn-whatsapp {
-            background-color: #25D366;
+        
+        .transformation-section {
+            background-color: var(--secondary-color);
             color: white;
-            font-weight: bold;
+        }
+        
+        .transformation-section h2 {
+            color: var(--primary-color);
+        }
+
+        .course-details-card {
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            border: 1px solid #eee;
+        }
+
+        .course-details-card h3 {
+             color: var(--primary-color);
+        }
+
+        .course-details-card ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .course-details-card li {
+            padding-left: 2rem;
+            position: relative;
+            margin-bottom: 1rem;
+        }
+        
+        .course-details-card li::before {
+            content: '\f00c'; /* Check icon */
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            color: var(--accent-color);
+            position: absolute;
+            left: 0;
+            top: 5px;
+        }
+
+        .filter-section .card-body {
+            padding: 2rem;
+        }
+        .filter-section h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+        }
+
+        .testimonial-card {
+            background-color: #fff;
+            padding: 2rem;
+            border-left: 5px solid var(--primary-color);
+        }
+
+        .founder-section img {
+            max-width: 350px;
+            border-radius: 50%;
+            border: 10px solid white;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .cta-section {
+            background-color: white;
+            border-top: 1px solid #eee;
         }
     </style>
 </head>
 <body>
-    <!-- HEADER -->
-    <header class="header-bg py-2">
-        <div class="container d-flex justify-content-between align-items-center">
-            <a class="navbar-brand playfair" href="#">TU ACADEMIA</a>
-            <a href="#contacto" class="btn btn-outline-light btn-sm d-none d-md-block">Contacto</a>
-        </div>
-    </header>
 
-    <!-- SECCIÓN 1: EL GANCHO -->
-    <section class="hero">
+    <!-- HERO SECTION -->
+    <section class="section hero">
         <div class="container">
-            <h1 class="mb-3">TU BOLETO DIRECTO PARA SER UNA ARTISTA DE LA BELLEZA</h1>
-            <p class="lead mb-4">Incluso si estás empezando desde cero.</p>
-            <a href="#contacto" class="btn btn-custom btn-lg">QUIERO MÁS INFORMACIÓN</a>
-            <!-- Aquí podrías insertar un video o imagen de fondo -->
+            <h1 class="display-4">💋 ¿Quieres aprender micropigmentación y comenzar tu propio negocio con enfoque y resultados reales?</h1>
+            <p class="lead my-4 col-md-8 mx-auto">Descubre cómo una de las profesiones más rentables y demandadas puede darte la independencia económica y la libertad que siempre has deseado.</p>
         </div>
     </section>
 
-    <!-- SECCIÓN 2: EL PROBLEMA -->
-    <section class="section text-center">
-        <div class="container">
-            <h2 class="playfair">No te falta talento. Te falta el método correcto.</h2>
-            <p class="lead my-4 col-md-8 mx-auto">Nuestra formación te da el plan, la técnica y la confianza para convertir lo que amas en un negocio rentable y con libertad.</p>
-            <hr class="w-50 mx-auto my-5">
-            <h3 class="playfair mb-4">¿ESTÁS LISTA PARA CREAR, pero no sabes por dónde empezar?</h3>
-            <div class="col-md-8 mx-auto">
-                <div class="pain-point-box">Sientes que no tienes los recursos ni el conocimiento para empezar.</div>
-                <div class="pain-point-box">Ves a otras artistas triunfar mientras tú sigues esperando tu turno.</div>
-                <div class="pain-point-box">Te abruma tanta información y no sabes cuál camino elegir.</div>
-                <div class="pain-point-box">Tienes miedo de no estar a la altura o de fracasar otra vez.</div>
-            </div>
-             <a href="#contacto" class="btn btn-custom mt-4">QUIERO EL MÉTODO</a>
-        </div>
-    </section>
-
-    <!-- SECCIÓN 3: LA TRANSFORMACIÓN -->
-    <section class="section bg-white">
-        <div class="container">
-            <h2 class="text-center mb-5 playfair">Itinerario de tu Transformación: ¿Qué vas a lograr?</h2>
-            <div class="row justify-content-center">
-                <div class="col-md-8">
-                    <div class="itinerary-item">Dominar las técnicas más rentables: Microblading, Shading y Labios.</div>
-                    <div class="itinerary-item">Vender tus servicios premium con seguridad y autenticidad.</div>
-                    <div class="itinerary-item">Construir una marca personal que atraiga a tus clientes ideales.</div>
-                    <div class="itinerary-item">Crear un portafolio profesional y contenido que enamore.</div>
-                    <div class="itinerary-item">Ganar dinero desde tu propio estudio, con libertad de horarios.</div>
-                    <div class="itinerary-item">Proyectar una imagen segura que refleje el valor de tu arte.</div>
+    <!-- THE MARKET OPPORTUNITY -->
+    <section class="section market-section">
+        <div class="container text-center">
+            <h2 class="heading-font mb-5">💎 El Mundo de la Belleza No Se Detiene</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <p class="icon"><i class="fas fa-chart-line"></i></p>
+                    <h5 class="fw-bold">Industria en Crecimiento</h5>
+                    <p>La industria de la belleza mueve miles de millones cada año. La micropigmentación es una de las áreas más rentables y con mayor demanda.</p>
+                </div>
+                <div class="col-md-4">
+                    <p class="icon"><i class="fas fa-star"></i></p>
+                    <h5 class="fw-bold">Alta Demanda</h5>
+                    <p>Cada día, más personas buscan realzar su belleza de forma semipermanente, buscando artistas cualificadas y profesionales como tú.</p>
+                </div>
+                <div class="col-md-4">
+                    <p class="icon"><i class="fas fa-rocket"></i></p>
+                    <h5 class="fw-bold">Oportunidad Real</h5>
+                    <p>Esto no es solo una técnica, es tu oportunidad de alcanzar la independencia económica, gestionar tu tiempo y vivir de tu pasión.</p>
                 </div>
             </div>
         </div>
     </section>
-    
-    <!-- SECCIÓN 4: LA GUÍA (INSTRUCTORA) -->
-    <!-- Coloca una buena foto tuya aquí -->
 
-    <!-- SECCIÓN 5: ¿QUÉ INCLUYE? -->
-    <!-- Coloca una imagen de tu kit o de alumnas en clase -->
+    <!-- THE TRANSFORMATION -->
+    <section class="section transformation-section text-center">
+        <div class="container col-md-8 mx-auto">
+             <h2 class="heading-font mb-4">💖 La Micropigmentación: Más que una técnica, una transformación</h2>
+             <p class="fs-5">La micropigmentación no solo es una técnica — es una oportunidad de transformar tu vida y la de otras mujeres. Con esta habilidad puedes crear belleza, generar ingresos y tener libertad. Lo que hoy puede parecer un sueño, con planificación y acompañamiento, puede convertirse en tu nuevo estilo de vida.</p>
+        </div>
+    </section>
 
-    <!-- SECCIÓN 6 Y 7: PREGUNTAS Y PRUEBA SOCIAL -->
-    <!-- Puedes añadir estas secciones siguiendo el mismo patrón -->
-
-    <!-- SECCIÓN 8: LLAMADA A LA ACCIÓN FINAL -->
-    <section id="contacto" class="section cta-final text-center">
+    <!-- COURSE PRESENTATION & DETAILS -->
+    <section class="section">
         <div class="container">
-            <h2 class="playfair">Tienes el mapa. ¡Ahora toma el pincel y diseña tu futuro!</h2>
-            <p class="lead my-4 col-md-8 mx-auto">No publicamos el precio porque queremos asegurarnos de que esta formación es perfecta para ti. Hablemos sin compromiso y resolvamos todas tus dudas.</p>
-            
-            <div class="row mt-5 justify-content-center">
-                <div class="col-md-5 mb-4">
-                    <div class="card p-4 text-dark">
-                        <h5 class="fw-bold">Déjanos tus datos y te llamamos</h5>
-                        <form>
-                            <div class="mb-3"><input type="text" class="form-control" placeholder="Tu Nombre" required></div>
-                            <div class="mb-3"><input type="tel" class="form-control" placeholder="Tu Teléfono (con código de país)" required></div>
-                            <button type="submit" class="btn btn-custom w-100">Agendar mi llamada de asesoría</button>
-                        </form>
+            <div class="text-center mb-5">
+                <h2 class="heading-font">👑 Curso de Micropigmentación LEIRI ACADEMY</h2>
+                <p class="lead">Aquí formamos mujeres valientes, decididas y comprometidas a cambiar su historia.</p>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="course-details-card p-5">
+                        <p class="fs-5">En Leiri Academy trabajamos con <strong>grupos pequeños</strong> porque creemos que cada mujer merece acompañamiento real y resultados tangibles.</p>
+                        <hr class="my-4">
+                        <h3 class="mb-3">📅 Duración: 4 Días de Formación Intensiva</h3>
+                        <h3 class="mb-4">💄 Incluye:</h3>
+                        <ul>
+                            <li>Práctica en modelo real para ganar confianza.</li>
+                            <li>Certificación profesional que avala tus conocimientos.</li>
+                            <li>Todos los materiales de práctica de alta calidad incluidos.</li>
+                            <li>Seguimiento personalizado después del curso para resolver dudas.</li>
+                            <li>Acompañamiento en tu primer servicio real para garantizar tu éxito.</li>
+                        </ul>
+                        <div class="alert alert-light mt-4" role="alert" style="border-left: 4px solid var(--accent-color);">
+                            <h5 class="fw-bold">Recupera tu inversión rápidamente</h5>
+                            <p class="mb-0">Este programa está diseñado para que recuperes tu inversión en tus primeras <strong>5 a 8 clientas</strong> y empieces a generar ingresos desde el inicio.</p>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-5 mb-4 d-flex align-items-center">
-                     <div class="card p-4 w-100 text-dark">
-                        <h5 class="fw-bold">O escríbenos directamente</h5>
-                        <p>Inicia una conversación con una asesora ahora mismo.</p>
-                        <!-- IMPORTANTE: Cambia "123456789" por tu número de WhatsApp -->
-                        <a href="https://wa.me/123456789?text=Hola,%20quisiera%20más%20información%20sobre%20la%20formación%20en%20micropigmentación." class="btn btn-whatsapp btn-lg w-100" target="_blank">
-                           Chatear por WhatsApp
-                        </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- AUDIENCE FILTERING SECTION -->
+    <section class="section filter-section bg-white">
+        <div class="container">
+            <div class="row g-4 justify-content-center">
+                <!-- Este curso NO es para ti si... -->
+                <div class="col-md-6">
+                    <div class="card h-100 border-danger border-2">
+                        <div class="card-body">
+                            <h4 class="text-danger mb-3">🚫 Este curso NO es para ti si...</h4>
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="fas fa-times-circle text-danger me-2"></i>Buscas resultados rápidos sin compromiso.</li>
+                                <li class="mb-2"><i class="fas fa-times-circle text-danger me-2"></i>No estás dispuesta a invertir en ti.</li>
+                                <li class="mb-2"><i class="fas fa-times-circle text-danger me-2"></i>Esperas que las oportunidades lleguen solas.</li>
+                                <li class="mb-2"><i class="fas fa-times-circle text-danger me-2"></i>Solo buscas un curso barato sin valorar la transformación.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- Este curso ES para ti si... -->
+                <div class="col-md-6">
+                    <div class="card h-100 border-success border-2">
+                        <div class="card-body">
+                            <h4 class="text-success mb-3">💫 Este curso ES para ti si...</h4>
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Estás lista para invertir en ti y transformar tu vida.</li>
+                                <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Quieres aprender una técnica rentable y con propósito.</li>
+                                <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Te apasiona la belleza y deseas tener tu propio negocio.</li>
+                                <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Sabes que el éxito se logra con enfoque y acción.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="section">
+        <div class="container">
+            <h2 class="heading-font text-center mb-5">💬 Lo que dicen nuestras artistas</h2>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="testimonial-card">
+                        <p class="fs-5">“Nunca imaginé recuperar mi inversión tan rápido. En menos de un mes ya tenía mis primeras clientas y había recuperado todo.”</p>
+                        <footer class="blockquote-footer mt-2">Daniela R.</footer>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="testimonial-card">
+                        <p class="fs-5">“Lo que más me gustó fue el acompañamiento. Leiri estuvo pendiente de cada detalle hasta que logré resultados reales con mis modelos.”</p>
+                        <footer class="blockquote-footer mt-2">María G.</footer>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOUNDER STORY -->
+    <section class="section bg-white">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-5 text-center">
+                    <!-- Coloca aquí una URL de tu foto -->
+                    <img src="https://via.placeholder.com/350" alt="Leiri, fundadora de Leiri Academy" class="img-fluid">
+                </div>
+                <div class="col-md-7">
+                    <h2 class="heading-font">🌸 La historia de Leiri</h2>
+                    <p class="lead">Soy Leiri, fundadora de Leiri Academy, y sé lo que es empezar desde cero.</p>
+                    <p>Mi misión es ayudarte a descubrir que todo se logra con planificación, enfoque y constancia. En este curso te enseño no solo la técnica, sino también cómo convertir tu talento en un negocio rentable, con mi apoyo en cada paso. Porque más que enseñar micropigmentación, acompaño transformaciones reales.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CALL TO ACTION -->
+    <section class="section cta-section" id="postulate">
+        <div class="container text-center">
+            <h2 class="heading-font">💎 Método Exclusivo de Leiri Academy</h2>
+            <p class="lead col-md-8 mx-auto">Este programa está diseñado para mujeres enfocadas en su crecimiento. Solo las que están dispuestas a invertir en sí mismas y a planificar su futuro podrán aprovechar esta oportunidad.</p>
+            <div class="my-4">
+                <h3 class="heading-font" style="color: var(--primary-color);">Si sientes que este es tu momento, y estás lista para formar parte de una de las 4 chicas seleccionadas...</h3>
+            </div>
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="card p-4 shadow-sm">
+                        <h5 class="fw-bold">Postúlate aquí para descubrir si eres una de ellas</h5>
+                        <form>
+                            <div class="mb-3">
+                                <input type="text" class="form-control" placeholder="Nombre Completo" required>
+                            </div>
+                            <div class="mb-3">
+                                <input type="tel" class="form-control" placeholder="Tu número de WhatsApp (con código de país)" required>
+                            </div>
+                            <button type="submit" class="btn btn-custom w-100">[QUIERO POSTULARME AHORA]</button>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -177,9 +316,10 @@
     </section>
 
     <footer class="text-center p-4 bg-dark text-white">
-        <p>&copy; 2025 Tu Academia de Belleza. Todos los derechos reservados.</p>
+        <p class="mb-0">&copy; 2025 Leiri Academy. Todos los derechos reservados.</p>
     </footer>
 
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
